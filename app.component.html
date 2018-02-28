@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>Mr.Cooper</h1>
+  <!-- <input #userId type="text" class="input-field" /> -->
+  <ng2-completer [(ngModel)]="searchStr" [datasource]="dataService" [minSearchLength]="0"></ng2-completer>
+  <button (click)="onEnter(userId.value)" class="input-button">Submit</button>
+  <div>
+    <table *ngFor="let repoName of publicRepoNames">
+      <td>
+        {{repoName}}
+      </td>
+    </table>
+  </div>
+</div>
